@@ -1,7 +1,7 @@
-ArduninoIDE
+ArduinoIDE
 ===========
 
-Web based IDE for openFPGAdunino
+Web based IDE for openFPGAduino
 
 Simulation:
 

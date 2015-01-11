@@ -1,6 +1,6 @@
 int main(int argn, char* argv[])
 {
-	printf("openFPGArdunino\n");
+	printf("openFPGArduino\n");
 	printf("hello word\n");
 	return 0;
 }
