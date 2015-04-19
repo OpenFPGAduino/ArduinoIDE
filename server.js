@@ -33,7 +33,7 @@ var arguments = process.argv.splice(2);
 for (index in arguments)
 {
 	if (arguments[index]=="-sim") simulation=true;
-        else if (arguments[index]=="-debug") debug=true;
+    else if (arguments[index]=="-debug") debug=true;
 		
 }
 
