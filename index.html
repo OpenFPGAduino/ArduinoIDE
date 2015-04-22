@@ -86,6 +86,9 @@ Configurations
 </button>
   <ul id=version_list class="dropdown-menu" role="menu">
   </ul>
+  <span onclick="fpga()" class="btn btn-info" title="go to the fpga designer">
+    FPGAdesigner
+  </span>
 </div>
 </span>
 <pre id="editor">
@@ -366,6 +369,9 @@ int main(int argn, char* argv[])
 		ajax_rest_post("config",version);
 	}
 	
+    function fpga() {
+        window.location.port=8686;
+    }
 	function load_example(event) {
 		var example = event.srcElement.innerText;
 		debuginf(example);
