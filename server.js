@@ -162,7 +162,7 @@ http.createServer(function (req, res) {
               {
                     command  = "gcc main.c -o main";
               } else {
-                    command  = "gcc main.c api/libAdunino.a -o main";
+                    command  = "gcc main.c api/libaduino.a -o main";
               }
               p.exec(command,
               	      function (error,stdout,stderr) {
