@@ -153,7 +153,8 @@ http.createServer(function (req, res) {
 		  code = querystring.parse(code); 
 		  debuginf(code);
 		  code = code.arg1;
-	      
+              if (simulation != true)
+	          code = '#include"api/openfpgaduino.h"\n'+ code;
 	      debuginf(code);
               fs.writeFileSync('main.c', code);	      
 	      if (gcc == true) {
