@@ -23,6 +23,7 @@ var http = require("http"),
 	p = require('child_process');
 var simulation = false;
 var debug = false;
+var js = false;
 function debuginf(string) {
 	if (debug == true) {
 		console.log(string);
@@ -39,6 +40,14 @@ for (index in arguments)
 
 var console_message = "";
 var error_message = "";
+var version;
+if (js == true)
+{
+   version = "js";
+} esle
+{
+   version = "c";	
+}
 http.createServer(function (req, res) {
 	var pathname=__dirname+url.parse(req.url).pathname;
 	var version = '';
