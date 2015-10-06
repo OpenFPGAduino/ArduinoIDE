@@ -30,24 +30,21 @@ function debuginf(string) {
 	}
 }
 
+var port = 8888;
 var arguments = process.argv.splice(2);
 for (index in arguments)
 {
 	if (arguments[index]=="-sim") simulation=true;
     else if (arguments[index]=="-debug") debug=true;
-		
+    else if (arguments[index]=="-p") {
+        var i = 1 + parseInt(index); 
+	port=arguments[i];
+    }		
 }
 
 var console_message = "";
 var error_message = "";
-var version;
-if (js == true)
-{
-   version = "js";
-} esle
-{
-   version = "c";	
-}
+
 http.createServer(function (req, res) {
 	var pathname=__dirname+url.parse(req.url).pathname;
 	var version = '';
@@ -295,6 +292,6 @@ http.createServer(function (req, res) {
 		}
 	});
 
-}).listen(8888);
+}).listen(port);
 
-console.log("IDE running at port 8888");
+console.log("IDE running at port "+port);
