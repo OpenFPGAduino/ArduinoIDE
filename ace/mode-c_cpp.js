@@ -108,7 +108,7 @@ var DocCommentHighlightRules = require("./doc_comment_highlight_rules").DocComme
 var TextHighlightRules = require("./text_highlight_rules").TextHighlightRules;
 
 var xhr = new XMLHttpRequest();
-xhr.open("get","api/lophilo.h",false);
+xhr.open("get","api/openFPGArduino.h",false);
 xhr.send();
 var api_doc = xhr.responseText;
 debuginf("load function");
