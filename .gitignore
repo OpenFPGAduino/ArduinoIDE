@@ -1,3 +1,5 @@
 *.o
 *~
 docs
+main.c
+main
